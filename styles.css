@@ -4,28 +4,184 @@
     box-sizing: border-box;
 }
 
-.nav-bar {
-    display: flex;
-    justify-content: space-around;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
-.nav-bar a {
-    text-decoration: none;
+body {
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
 
-.number-wsp {
-    color: #1ba974;
+
+.sidebar img {
+    display: block;
 }
 
-.sidebar {
-    background-color: #01504d;
-    display: flex;
-    flex-direction: column;
-}
-
-.sidebar {
+.sidebar{
+    display: inline-block;
     position: fixed;
     top: 0;
     bottom: 0;
+    left: 0;
+    background-color: #01504d;
+    padding: 30px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 }
+
+.home-icon{
+    margin-bottom: 700px;
+    width: 30px;
+    height: 30px;
+}
+
+.social-icons img {
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.content{
+    margin-left: 60px;
+    width: calc(100% - 60px);
+    background-color: #fff;
+    padding: 50px 70px 50px 130px;
+}
+
+.sidebar .social-icons{
+    display: inline-block;
+    position: fixed;
+    top: 550px;
+    bottom: 0;
+}
+
+.navbar a{
+    padding: 50px;
+}
+
+.numero-wsp {
+    display: inline;
+}
+
+.numero-wsp img {
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+}
+
+.columna-derecha h2{
+    color:#01504d;
+}
+
+main{
+    background-color: #01504d;
+    height: 700px;
+    width: 1200px;
+    margin: 70px;
+    margin-top: 90px;
+}
+
+.columna-izquierda {
+    display: block;
+    width: 580px;
+    height: 700px;
+    background-color: #01504d;
+    float: left;
+    padding-top: 200px;
+    background-image: linear-gradient(45deg, rgba(5, 54, 83, 0.767) 0%,rgba(13, 92, 112, 0.555) 99%, rgba(16, 98, 146, 0.747) 100%),url(img/odontonenaa.jpg);;
+}
+
+.columna-derecha {
+    display: block;
+    width: 620px;
+    height: 700px;
+    background-color: rgb(213, 207, 215);
+    float: right;
+    padding-top: 100px;
+}
+
+.columna.izquierda p, h1, h2{
+    line-height: 2;
+    padding-left: 10px;
+    color: white;
+}
+
+.columna-izquierda p{
+    color: white;
+    font-size: 16px;
+}
+
+.dental {
+    color: #097b77;
+}
+
+.book-now, .read-more{
+    margin-top: 20px;
+    margin-left: 16px;
+    border-radius: 18px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #01504d;
+    color: white;
+}
+
+.read-more::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    display: inline-block;
+    background-image: url(img/play-button.png);
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.book-now::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    display: inline-block;
+    background-image: url(img/play-white.png);
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 14px;
+    margin: 20px;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group input[type="time"] {
+    width: 99%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background-color: #f2f2f2;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="date"]:focus,
+.form-group input[type="time"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(27, 169, 116, 0.5);
+}
+
+
