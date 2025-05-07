@@ -1,53 +1,61 @@
+/* Elimina márgenes y rellenos por defecto y ajusta el modelo de caja */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Importa la fuente 'Poppins' desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
+/* Aplica la fuente 'Poppins' al cuerpo del documento y un peso por defecto de 500 */
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
 
-
+/* Asegura que las imágenes dentro de la barra lateral se muestren como bloques */
 .sidebar img {
     display: block;
 }
 
+/* Estilo general para la barra lateral */
 .sidebar{
-    display: inline-block;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #01504d;
-    padding: 30px;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
+    display: inline-block;             /* Permite que otros elementos estén en línea */
+    position: fixed;                   /* Fija la barra lateral en la pantalla */
+    top: 0;                            /* Desde la parte superior */
+    bottom: 0;                         /* Hasta la parte inferior */
+    left: 0;                           /* Pegado al borde izquierdo */
+    background-color: #01504d;        /* Color de fondo verde oscuro */
+    padding: 30px;                     /* Relleno interno */
+    justify-content: space-between;   /* Distribuye el contenido con espacio entre elementos */
+    align-items: center;              /* Centra los elementos verticalmente */
+    flex-direction: column;           /* Organiza los elementos en columna */
 }
 
+/* Ícono de inicio, con tamaño y margen inferior para separación */
 .home-icon{
     margin-bottom: 700px;
     width: 30px;
     height: 30px;
 }
 
+/* Imágenes dentro de íconos sociales: tamaño uniforme y separación superior */
 .social-icons img {
     margin-top: 10px;
     width: 30px;
     height: 30px;
 }
 
+/* Contenido principal, desplazado hacia la derecha por la barra lateral */
 .content{
-    margin-left: 60px;
-    width: calc(100% - 60px);
-    background-color: #fff;
-    padding: 50px 70px 50px 130px;
+    margin-left: 60px;                      /* Espacio para dejar libre la barra lateral */
+    width: calc(100% - 60px);              /* Ocupa el resto del ancho */
+    background-color: #fff;                /* Fondo blanco */
+    padding: 50px 70px 50px 130px;         /* Relleno interno (arriba, derecha, abajo, izquierda) */
 }
 
+/* Posiciona los íconos sociales de forma fija al fondo de la barra lateral */
 .sidebar .social-icons{
     display: inline-block;
     position: fixed;
@@ -55,24 +63,29 @@ body {
     bottom: 0;
 }
 
+/* Espaciado interno para enlaces de la barra de navegación */
 .navbar a{
     padding: 50px;
 }
 
+/* Estilo para un contenedor de número de WhatsApp (alineado en línea) */
 .numero-wsp {
     display: inline;
 }
 
+/* Estilo para ícono de WhatsApp: tamaño y alineación vertical */
 .numero-wsp img {
     height: 20px;
     width: 20px;
     vertical-align: middle;
 }
 
+/* Color de encabezados dentro de columna derecha */
 .columna-derecha h2{
     color:#01504d;
 }
 
+/* Estilo general para el contenedor <main> */
 main{
     background-color: #01504d;
     height: 700px;
@@ -81,6 +94,7 @@ main{
     margin-top: 90px;
 }
 
+/* Columna izquierda del diseño (ej. imagen o info visual) */
 .columna-izquierda {
     display: block;
     width: 580px;
@@ -88,9 +102,11 @@ main{
     background-color: #01504d;
     float: left;
     padding-top: 200px;
-    background-image: linear-gradient(45deg, rgba(5, 54, 83, 0.767) 0%,rgba(13, 92, 112, 0.555) 99%, rgba(16, 98, 146, 0.747) 100%),url(img/odontonenaa.jpg);;
+    /* Fondo compuesto: degradado más imagen de fondo */
+    background-image: linear-gradient(45deg, rgba(5, 54, 83, 0.767) 0%,rgba(13, 92, 112, 0.555) 99%, rgba(16, 98, 146, 0.747) 100%), url(img/odontonenaa.jpg);
 }
 
+/* Columna derecha del diseño (ej. formulario o texto) */
 .columna-derecha {
     display: block;
     width: 620px;
@@ -100,21 +116,25 @@ main{
     padding-top: 100px;
 }
 
+/* Estilos generales para texto en columna izquierda: espaciado, color blanco */
 .columna.izquierda p, h1, h2{
     line-height: 2;
     padding-left: 10px;
     color: white;
 }
 
+/* Estilo específico para párrafos en columna izquierda */
 .columna-izquierda p{
     color: white;
     font-size: 16px;
 }
 
+/* Texto con clase 'dental' en color verde azulado */
 .dental {
     color: #097b77;
 }
 
+/* Botones de acción: reservar o leer más */
 .book-now, .read-more{
     margin-top: 20px;
     margin-left: 16px;
@@ -128,32 +148,36 @@ main{
     color: white;
 }
 
+/* Ícono agregado al botón 'Leer más' */
 .read-more::after {
     content: "";
     width: 16px;
     height: 16px;
     margin-left: 8px;
     display: inline-block;
-    background-image: url(img/play-button.png);
+    background-image: url(img/play-button.png); /* Ícono en forma de botón de reproducir */
     background-size: contain;
     vertical-align: middle;
 }
 
+/* Ícono agregado al botón 'Reservar ahora' */
 .book-now::after {
     content: "";
     width: 16px;
     height: 16px;
     margin-left: 8px;
     display: inline-block;
-    background-image: url(img/play-white.png);
+    background-image: url(img/play-white.png); /* Variante blanca del ícono */
     background-size: contain;
     vertical-align: middle;
 }
 
+/* Agrupación de campos en el formulario */
 .form-group {
     margin-bottom: 20px;
 }
 
+/* Estilo de etiquetas en formulario */
 .form-group label {
     font-weight: 600;
     font-size: 14px;
@@ -161,6 +185,7 @@ main{
     margin-bottom: 5px;
 }
 
+/* Estilo general para entradas de formulario */
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group input[type="number"],
@@ -175,13 +200,12 @@ main{
     margin-top: 10px;
 }
 
+/* Efecto visual al enfocar campos del formulario */
 .form-group input[type="text"]:focus,
 .form-group input[type="email"]:focus,
 .form-group input[type="tel"]:focus,
 .form-group input[type="date"]:focus,
 .form-group input[type="time"]:focus {
     outline: none;
-    box-shadow: 0 0 5px rgba(27, 169, 116, 0.5);
+    box-shadow: 0 0 5px rgba(27, 169, 116, 0.5); /* Sombra verde suave */
 }
-
-
